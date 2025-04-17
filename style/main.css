@@ -45,14 +45,17 @@ body {
 }
 
 /* Раздел "Our Story" */
-.story {}
+.story {
+    padding: 50px 0;
+}
 
 .story_title_2 {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     font-size: 18px;
-    padding: 50px 0;
+    padding: 30px 0;
+    color: #48555B;
 }
 
 .story_title_2::after {
@@ -66,16 +69,18 @@ body {
 
 .story_inner {
     display: flex;
+    justify-content: center;
 }
 
 .story_left {
     max-width: 398px;
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 .story_title_3 {
     font-weight: bold;
     font-size: 20px;
+    color: #48555B;
 }
 
 .accent-color {
@@ -87,6 +92,7 @@ body {
 .story_right {
     display: flex;
     gap: 20px;
+    align-items: flex-end;
 }
 
 .story_item {
@@ -107,6 +113,29 @@ body {
 }
 .story_item:nth-child(3) {
     background-image: url(../img/we_build.png);
+}
+
+@media screen and (width <= 1440px) {
+    .container {
+        /*padding: 0 250px; /~ было ~/*/
+        padding: 0 50px;
+    }
+}
+
+@media screen and (width <= 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .story_inner {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (width <= 500px) {
+    .story_right {
+        flex-wrap: wrap;
+    }
 }
 
 /* #endregion */
