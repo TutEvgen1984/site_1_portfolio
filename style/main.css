@@ -1,4 +1,4 @@
-/* Общие стили */
+/* #region Общие стили */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 html {
@@ -16,14 +16,40 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.container {
-    width: 100%;
+.container-1440 {
     max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* #endregion Общие стили */
+
+/* #region Раздел "Header */
+
+.header-main {
+    max-width: 1440px;
+    height: 768px;
+    background-image: url(../img/header-bg.png);
+}
+
+.company-logo-white {}
+
+.header__title_1 {}
+
+.header__title_4 {}
+
+
+/* #endregion  Раздел "Header */
+
+/* #region Раздел "Our Story" */
+.story_container {
+    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 250px;
 }
 
-/* #region Раздел "Our Story" */
 .story {
     padding: 50px 0;
 }
@@ -101,13 +127,13 @@ body {
 
 /* Адаптивная версия - медиа запросы */
 @media screen and (max-width: 1440px) {
-    .container {
+    .story_container {
         padding: 0 50px;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .container {
+    .story_container {
         padding: 0 15px;
     }
 
@@ -154,4 +180,4 @@ body {
     }
 }
 
-/* #endregion */
+/* #endregion Раздел "Our Story" */
