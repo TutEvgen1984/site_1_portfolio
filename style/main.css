@@ -1,20 +1,6 @@
-/* #region Шрифты */
+/* Общие стили */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-
-/* .open-sans-<uniquifier> {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  } */
-
-/* #endregion */
-
-/* #region Сброс минимум (минимальный) */
 html {
     box-sizing: border-box;
 }
@@ -27,11 +13,8 @@ html {
 
 body {
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
-
-/* #endregion Сброс минимум (минимальный) */
-
-/* #region Сайт */
 
 .container {
     width: 100%;
@@ -40,25 +23,27 @@ body {
     padding: 0 250px;
 }
 
-body {
-    font-family: "Open Sans", sans-serif;
-}
-
-/* Раздел "Our Story" */
+/* #region Раздел "Our Story" */
 .story {
     padding: 50px 0;
 }
 
+.story_left {
+    max-width: 398px;
+    margin-right: 50px;
+}
+
 .story_title_2 {
+    letter-spacing: 0.2em;
+    color: #48555B;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     font-size: 18px;
     padding: 30px 0;
-    color: #48555B;
 }
 
-.story_title_2::after {
+.story_title_2:after {
     content: '';
     width: 50px;
     height: 2px;
@@ -72,15 +57,10 @@ body {
     justify-content: center;
 }
 
-.story_left {
-    max-width: 398px;
-    margin-right: 50px;
-}
-
 .story_title_3 {
+    color: #48555B;
     font-weight: bold;
     font-size: 20px;
-    color: #48555B;
 }
 
 .accent-color {
@@ -91,50 +71,86 @@ body {
 
 .story_right {
     display: flex;
-    gap: 20px;
     align-items: flex-end;
 }
 
 .story_item {
+    padding: 15px;
     font-size: 24px;
     color: #fff;
     font-weight: 800;
     text-transform: uppercase;
     width: 140px;
     height: 224px;
-    padding: 15px;
+    margin-right: 20px;
+    background-size: cover;
 }
 
 .story_item:nth-child(1) {
     background-image: url(../img/we_plan.png);
 }
+
 .story_item:nth-child(2) {
     background-image: url(../img/we_manage.png);
 }
+
 .story_item:nth-child(3) {
     background-image: url(../img/we_build.png);
+    margin-right: 0px;
 }
 
-@media screen and (width <= 1440px) {
+/* Адаптивная версия - медиа запросы */
+@media screen and (max-width: 1440px) {
     .container {
-        /*padding: 0 250px; /~ было ~/*/
         padding: 0 50px;
     }
 }
 
-@media screen and (width <= 1024px) {
+@media screen and (max-width: 1024px) {
     .container {
         padding: 0 15px;
+    }
+
+    .story_title_3 {
+        text-align: center;
     }
 
     .story_inner {
         flex-wrap: wrap;
     }
+
+    .story_left {
+        max-width: 80%;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
 }
 
-@media screen and (width <= 500px) {
+@media screen and (max-width: 540px) {
     .story_right {
         flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .story_item {
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 51%;
+        height: 350px;
+    }
+
+    .story_item:nth-child(3) {
+        margin-bottom: 0px;
+    }
+
+    .story_left {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .story_item {
+        width: 80%;
     }
 }
 
