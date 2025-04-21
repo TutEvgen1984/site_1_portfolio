@@ -1,5 +1,27 @@
 /* #region Общие стили */
+/* Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+/* .open-sans-<uniquifier> {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+} */
+
+/* Bebas Neue */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* .bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+:root {
+    --font-family: "Open Sans", sans-serif;
+    --second-family: "Bebas Neue", sans-serif;
+}
 
 html {
     box-sizing: border-box;
@@ -13,14 +35,12 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-family);
 }
 
 .container-1440 {
     max-width: 1440px;
-    width: 100%;
     margin: 0 auto;
-    padding: 0 30px;
 }
 
 /* #endregion Общие стили */
@@ -28,19 +48,110 @@ body {
 /* #region Раздел "Header */
 
 .header-main {
-    max-width: 1440px;
     height: 768px;
+    padding-top: 41px;
+    /* padding-bottom: 71; */
+
+    /* фон: */
     background-image: url(../img/header-bg.png);
+    background-size: cover;
+    background-position: center;
+    /* Если картинка не загрузится, то вместо неё пользователь увидит фоновый цвет. */
+    background-color: black;
+
+    /* весь текст внутри: */
+    text-align: center;
+    color: #fff;
 }
 
-.company-logo-white {}
+/* Белый логотип KONSTRUCT */
+.company-logo-white {
+    width: 101px;
+    height: 23px;
+    margin-bottom: 265px;
+}
 
-.header__title_1 {}
+/* Partner with konstuct */
+.header__title_h1 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 60px;
+    letter-spacing: 0.1em;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
 
-.header__title_4 {}
+/* An award-winning construction management firm */
+.header__title_h4 {
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 225px;
 
+}
+
+/* Scroll down */
+.header__title_h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.34em;
+}
 
 /* #endregion  Раздел "Header */
+
+/* #region Navigation */
+
+/* .navigation {} */
+
+.navigation__block {
+    display: flex;
+    height: 65px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 250px;
+}
+
+.company-logo-black {
+    width: 79px;
+    height: 18px;
+}
+
+.nav {}
+
+.nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-align: center;
+    color: #48555b;
+}
+
+.link1 {
+    margin-right: 44px;
+}
+
+.link2 {
+    margin-right: 38px;
+}
+
+.link3{
+    margin-right: 35px;
+}
+
+.link4 {
+    margin-right: 24px;
+}
+
+.link5 {}
+
+.nav__link--active {}
+
+/* #endregion Navigation */
 
 /* #region Раздел "Our Story" */
 .story_container {
@@ -55,7 +166,7 @@ body {
 }
 
 .story_left {
-    max-width: 398px;
+    max-width: 400px;
     margin-right: 50px;
 }
 
@@ -66,7 +177,10 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 18px;
-    padding: 30px 0;
+    padding-top: 9px;
+    margin-top: 0;
+    margin-bottom: 34px;
+    letter-spacing: 0.13em;
 }
 
 .story_title_2:after {
@@ -75,25 +189,36 @@ body {
     height: 2px;
     background-color: #00A4E5;
     display: block;
-    margin: 10px auto 0;
+    margin: 12px auto 0;
 }
 
 .story_inner {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .story_title_3 {
     color: #48555B;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
+    letter-spacing: 0.01em;
+    line-height: 1.3em;
+
 }
 
 .accent-color {
     color: #00A4E5;
 }
 
-.story_text {}
+.story_text {
+    padding-top: 13px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 177%;
+    letter-spacing: 0.01em;
+    color: #48555b;
+    margin-bottom: 2px;
+}
 
 .story_right {
     display: flex;
