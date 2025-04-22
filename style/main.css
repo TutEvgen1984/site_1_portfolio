@@ -43,6 +43,12 @@ body {
     margin: 0 auto;
 }
 
+.container-940 {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 /* #endregion Общие стили */
 
 /* #region Раздел "Header */
@@ -139,7 +145,7 @@ body {
     margin-right: 38px;
 }
 
-.link3{
+.link3 {
     margin-right: 35px;
 }
 
@@ -154,12 +160,7 @@ body {
 /* #endregion Navigation */
 
 /* #region Раздел "Our Story" */
-.story_container {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 250px;
-}
+
 
 .story {
     padding: 50px 0;
@@ -306,3 +307,55 @@ body {
 }
 
 /* #endregion Раздел "Our Story" */
+
+/* #region Раздел "Services" */
+.services {
+
+}
+
+.container-940 {
+
+}
+
+.services-content {
+
+}
+
+.services-top {
+
+}
+
+.services-top__title-h2 {
+
+}
+
+.services-top__text {
+
+}
+
+.services-top__link {
+
+}
+
+.services-bottom {
+
+}
+
+.services-bottom-item {
+
+}
+
+.services-bottom-item__icon {
+
+}
+
+.services-bottom-item__title=h3 {
+
+}
+
+.services-bottom-item__text {
+
+}
+
+
+/* #endregion Раздел "Services" */
