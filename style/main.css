@@ -85,6 +85,7 @@ body {
     letter-spacing: 0.1em;
     margin-bottom: 0px;
     text-transform: uppercase;
+    padding-left: 18px;
 }
 
 /* An award-winning construction management firm */
@@ -108,7 +109,7 @@ body {
 
 /* #endregion  Раздел "Header */
 
-/* #region Navigation */
+/* #region Раздел Navbar */
 
 /* .navigation {} */
 
@@ -310,52 +311,136 @@ body {
 
 /* #region Раздел "Services" */
 .services {
-
-}
-
-.container-940 {
-
+    margin-bottom: 115px;
 }
 
 .services-content {
-
+    padding-top: 68px;
 }
 
 .services-top {
-
+    display: grid;
+    grid-template-columns: 353px 437px 150px;
+    margin-bottom: 65px;
 }
 
 .services-top__title-h2 {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.13em;
+    color: #48555b;
+    text-transform: uppercase;
+    margin-top: 1px;
+}
 
+.services-top__title-h2:after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: #00A4E5;
+    display: block;
+    margin-top: 13px;
 }
 
 .services-top__text {
-
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 173%;
+    letter-spacing: 0.02em;
+    color: #48555b;
+    margin-top: 0;
+    padding-right: 40px;
 }
 
 .services-top__link {
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: #00A4E5;
+    text-align: center;
+    line-height: 40px;
 
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .services-bottom {
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .services-bottom-item {
-
+    max-width: 295px;
+    height: 330px;
+    padding-top: 37px;
+    border: 1px solid #E6E6E6;
+    padding-left: 22px;
+    padding-right: 20px;
 }
 
 .services-bottom-item__icon {
-
+    margin-bottom: 5px;
 }
 
 .services-bottom-item__title-h3 {
-
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #48555b;
+    text-transform: uppercase;
 }
 
 .services-bottom-item__text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 177%;
+    letter-spacing: 0.01em;
+    color: #48555b;
+}
+
+/* #endregion Раздел "Services" */
+
+/* #region section "get-in-touch */
+/* .get-in-touch {} */
+
+.get-in-touch-content {
+    text-align: center;
+    background-image: url(../img/get-in-touch-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 499px;
+    padding-top: 96px;
 
 }
 
+.get-in-touch-content__title-h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #48555b;
+    margin-bottom: 34px;
+}
 
-/* #endregion Раздел "Services" */
+.get-in-touch-content__link {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #00A4E5;
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+/* #endregion section "get-in-touch */
