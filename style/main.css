@@ -446,5 +446,56 @@ body {
 /* #endregion section "get-in-touch */
 
 /* #region Newsletter */
+/* .newsletter {} */
+
+.newsletter-content {
+    background-color: #171819;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-content-form {
+    display: flex;
+}
+
+.newsletter-content-form__label-for-input-user-mail {
+    color: #fff;
+    margin-right: 70px;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    color: #fff;
+
+}
+
+.newsletter-content-form__input-user-mail {
+    height: 40px;
+    width: 250px;
+    border: none;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: #48555b;
+}
+
+.newsletter-content-form__submit {
+    background-color: #00A4E5;
+    height: 40px;
+    width: 150px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    text-transform: uppercase;
+}
 
 /* #endregion */
