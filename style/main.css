@@ -405,7 +405,7 @@ body {
 
 /* #endregion Раздел "Services" */
 
-/* #region section "get-in-touch */
+/* #region Раздел "get-in-touch */
 /* .get-in-touch {} */
 
 .get-in-touch-content {
@@ -443,9 +443,9 @@ body {
     text-transform: uppercase;
 }
 
-/* #endregion section "get-in-touch */
+/* #endregion Раздел "get-in-touch */
 
-/* #region Newsletter */
+/* #region Раздел "Newsletter" */
 /* .newsletter {} */
 
 .newsletter-content {
@@ -497,9 +497,9 @@ body {
     text-transform: uppercase;
 }
 
-/* #endregion Newsletter */
+/* #endregion Раздел "Newsletter" */
 
-/* #region footer */
+/* #region Footer */
 /* .footer {} */
 
 .footer-content {
@@ -509,11 +509,14 @@ body {
 .footer-content__main-row {
     display: flex;
     color: #fff;
+    padding-top: 42px;
+    gap: 20px;
+    min-height: 240px;
 }
 
 .item-company {
     max-width: 250px;
-    margin-right: 71px;
+    margin-right: 50px;
 }
 
 .item__h3-title {
@@ -521,6 +524,11 @@ body {
     font-size: 11px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+.item_h3-company {
+    margin-top: 0;
+    margin-bottom: 19px;
 }
 
 .item__logo-white {
@@ -536,13 +544,13 @@ body {
     color: #fff;
 }
 
-.item__title {
-    text-transform: uppercase;
+.item_h3-links {
+    margin-bottom: 11px;
 }
 
 .item__grid-of-links {
     display: grid;
-    grid-template-columns: 150px 100px 100px;
+    grid-template-columns: 110px 91px 100px;
 }
 
 .column {
@@ -557,14 +565,46 @@ body {
     line-height: 227%;
     letter-spacing: 0.08em;
     color: #fff;
+    text-transform: uppercase;
 }
 
 .item-contact-us {
-
+    display: flex;
+    flex-direction: column;
+    max-width: 130px;
+    margin-right: 46px;
 }
 
-.item-socials {
+.item_contact-us {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
 
+.item-contact-us a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 145%;
+    letter-spacing: 0.08em;
+}
+
+.item-contact-us__map {
+    margin-bottom: 16px;
+}
+
+.item-contact-us__tel {
+    margin-bottom: 16px;
+}
+
+.item-contact-us__email {}
+
+.item-socials {
+    display: flex;
+    align-self: flex-start;
+    gap: 24px;
+    padding-top: 28px;
+    padding-left: 1px;
 }
 
 .footer__icon {
@@ -578,6 +618,11 @@ body {
 
 .copyright {
     color: #fff;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    margin: 0;
+    padding-top: 30px;
 }
 
-/* #endregion */
+/* #endregion Footer */
