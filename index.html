@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konstuct Template</title>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/normalize.css"> <!-- Первоначальный сброс -->
+    <link rel="stylesheet" href="style/main.css"> <!-- Свои стили -->
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="container-1440">
             <div class="header-main">
                 <img class="company-logo-white" src="img/company-logo-white.svg" alt="logo">
@@ -27,17 +27,17 @@
             <div class="navigation__block">
                 <img class="company-logo-black" src="img/company-logo-black.svg" alt="logo">
                 <nav class="nav">
-                    <a class="nav__link link1">Home</a>
-                    <a class="nav__link link2 nav__link--active" href="#">About</a>
-                    <a class="nav__link link3" href="#">Services</a>
-                    <a class="nav__link link4" href="#">Work</a>
-                    <a class="nav__link link5" href="#">Contact</a>
+                    <a class="nav__link link1" href="#home">Home</a>
+                    <a class="nav__link link2 nav__link--active" href="#about">About</a>
+                    <a class="nav__link link3" href="#services">Services</a>
+                    <a class="nav__link link4" href="#projects">Work</a>
+                    <a class="nav__link link5" href="#contact">Contact</a>
                 </nav>
             </div>
         </div>
     </section>
 
-    <section class="story">
+    <section class="story" id="about">
         <div class="container-940">
             <h2 class="story_title_2">Our Story</h2>
             <div class="story_inner">
@@ -62,13 +62,13 @@
     <section class="services">
         <div class="container-940">
             <div class="services-content">
-                <div class="services-top">
+                <div class="services-top" id="services">
                     <h2 class="services-top__title-h2">Our capabilities</h2>
                     <p class="services-top__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                         nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
                     <a class="services-top__link">All services</a>
                 </div>
-                <div class="services-bottom">
+                <div class="services-bottom" id="projects">
                     <!-- #region Карточка 1 -->
                     <div class="services-bottom-item">
                         <img class="services-bottom-item__icon" src="img/services_icon1.svg" alt="Managment-icon">
@@ -110,7 +110,7 @@
                 <div class="container-940">
                     <form class="newsletter-content-form">
                         <label class="newsletter-content-form__label-for-input-user-mail" for="user-mail">Newsletter Signup</label>
-                        <input class="newsletter-content-form__input-user-mail" type="text" id="user-mail" placeholder="test@youremail.com">
+                        <input class="newsletter-content-form__input-user-mail" type="email" id="user-mail" placeholder="test@youremail.com" required pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
                         <input class="newsletter-content-form__submit" type="submit" value="Signup">
                     </form>
                 </div>
@@ -132,10 +132,10 @@
                             <div class="item__h3-title item_h3-links">Links</div>
                             <div class="item__grid-of-links">
                                 <div class="column">
-                                    <a href="#" class="grid-of-links__column-link">Home</a>
-                                    <a href="#" class="grid-of-links__column-link">About</a>
-                                    <a href="#" class="grid-of-links__column-link">Services</a>
-                                    <a href="#" class="grid-of-links__column-link">Projects</a>
+                                    <a href="#home" class="grid-of-links__column-link">Home</a>
+                                    <a href="#about" class="grid-of-links__column-link">About</a>
+                                    <a href="#services" class="grid-of-links__column-link">Services</a>
+                                    <a href="#projects" class="grid-of-links__column-link">Projects</a>
                                     <a href="#" class="grid-of-links__column-link">Contact us</a>
                                 </div>
                                 <div class="column">
@@ -150,7 +150,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-contact-us">
+                        <div class="item-contact-us" id="contact">
                             <h3 class="item__h3-title item_contact-us">Contact us</h3>
                             <a class="item-contact-us__map" href="https://maps.app.goo.gl/cCCDnp68co9DNiVn7">213 Baker Street<br>Oriel City Kounty<br>7000 KNW,<br>Kountry Name</a>
                             <a class="item-contact-us__tel" href="tel:+239942334022">+23 994 233 4022</a>
@@ -158,9 +158,9 @@
 
                         </div>
                         <div class="item-socials">
-                            <img class="footer__icon" src="img/facebook-icon.svg" alt="facebook-icon">
-                            <img class="footer__icon" src="img/twitter-icon.svg" alt="twitter-icon">
-                            <img class="footer__icon" src="img/google-icon.svg" alt="google-icon">
+                            <a href="facebook.com"><img class="footer__icon" src="img/facebook-icon.svg" alt="facebook-icon"></a>
+                            <a href="x.com"><img class="footer__icon" src="img/twitter-icon.svg" alt="twitter-icon"></a>
+                            <a href="google.com"><img class="footer__icon" src="img/google-icon.svg" alt="google-icon"></a>
                         </div>
                     </div>
                     <div class="footer-content__bottom">

@@ -138,6 +138,10 @@ body {
     color: #48555b;
 }
 
+.nav__link:hover {
+    color: #00A4E5;
+}
+
 .link1 {
     margin-right: 44px;
 }
@@ -607,8 +611,8 @@ body {
     padding-left: 1px;
 }
 
-.footer__icon {
-
+.footer__icon:hover {
+    background-color: #00A4E5;
 }
 
 .footer-content__bottom {
