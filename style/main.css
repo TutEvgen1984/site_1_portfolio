@@ -105,6 +105,13 @@ body {
     font-weight: 600;
     font-size: 11px;
     letter-spacing: 0.34em;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header__title_h3:hover {
+    color: #00A4E5;
+    -webkit-text-stroke: 1px #fff; /* Толщина и цвет обводки */
 }
 
 /* #endregion  Раздел "Header */
@@ -370,6 +377,15 @@ body {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
+    cursor: pointer;
+
+    transition-property: transform, background-color;
+    transition-duration: 0.3s;
+}
+
+.services-top__link:hover {
+    transform: scale(110%);
+    background-color: blue;
 }
 
 .services-bottom {
@@ -445,6 +461,15 @@ body {
     text-align: center;
     line-height: 40px;
     text-transform: uppercase;
+    cursor: pointer;
+
+    transition-property: transform, background-color;
+    transition-duration: 0.3s;
+}
+
+.get-in-touch-content__link:hover {
+    transform: scale(110%);
+    background-color: blue;
 }
 
 /* #endregion Раздел "get-in-touch */
@@ -499,6 +524,14 @@ body {
     letter-spacing: 0.04em;
     color: #fff;
     text-transform: uppercase;
+
+    transition-property: transform, background-color;
+    transition-duration: 0.3s;
+}
+
+.newsletter-content-form__submit:hover {
+    transform: scale(110%);
+    background-color: blue;
 }
 
 /* #endregion Раздел "Newsletter" */
@@ -572,6 +605,10 @@ body {
     text-transform: uppercase;
 }
 
+.grid-of-links__column-link:hover {
+    color: #00A4E5;
+}
+
 .item-contact-us {
     display: flex;
     flex-direction: column;
@@ -597,11 +634,23 @@ body {
     margin-bottom: 16px;
 }
 
+.item-contact-us__map:hover {
+    color: #00A4E5;
+}
+
 .item-contact-us__tel {
     margin-bottom: 16px;
 }
 
+.item-contact-us__tel:hover {
+    color: #00A4E5;
+}
+
 .item-contact-us__email {}
+
+.item-contact-us__email:hover {
+    color: #00A4E5;
+}
 
 .item-socials {
     display: flex;
