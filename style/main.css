@@ -111,7 +111,8 @@ body {
 
 .header__title_h3:hover {
     color: #00A4E5;
-    -webkit-text-stroke: 1px #fff; /* Толщина и цвет обводки */
+    -webkit-text-stroke: 1px #fff;
+    /* Толщина и цвет обводки */
 }
 
 /* #endregion  Раздел "Header */
@@ -534,6 +535,14 @@ body {
     background-color: blue;
 }
 
+/* Сообщение о ошибке ввода email */
+/* Изначально блока не видно на странице так как в блоке ничего нет */
+.error-message {
+    color: red;
+    font-size: 14px;
+    /* border: 2px solid red; */
+}
+
 /* #endregion Раздел "Newsletter" */
 
 /* #region Footer */
@@ -681,3 +690,41 @@ body {
 }
 
 /* #endregion Footer */
+
+/* #region Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-accent);
+
+    margin: 15% auto;
+    padding: 20px;
+    width: 30%;
+}
+
+.close {
+    color: var(--color-main);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--color-accent);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* #endregion */

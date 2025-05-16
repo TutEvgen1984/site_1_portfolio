@@ -127,10 +127,14 @@
                     <form class="newsletter-content-form">
                         <label class="newsletter-content-form__label-for-input-user-mail" for="user-mail">Newsletter
                             Signup</label>
-                        <input class="newsletter-content-form__input-user-mail" type="email" id="user-mail"
-                            placeholder="test@youremail.com" required
-                            pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                        <div class="email-plus-error-message">
+                            <input class="newsletter-content-form__input-user-mail" type="email" id="user-mail"
+                                placeholder="test@youremail.com" required
+                                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                            <div class="error-message"></div>
+                        </div>
                         <input class="newsletter-content-form__submit" type="submit" value="Signup">
+
                     </form>
                 </div>
             </div>
@@ -196,6 +200,19 @@
         </div>
     </footer>
     <!-- #endregion Footer -->
+
+    <!-- #region Модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="modal-text"></p>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region script -->
+    <script src="js/main.js"></script>
+    <!-- #endregion -->
 
 </body>
 
