@@ -1,11 +1,12 @@
-const emailInput = document.querySelector('.newsletter__input');
+const emailInput = document.querySelector('.newsletter-content-form__input-user-mail');
 const errorMessage = document.querySelector('.error-message');
-const newsletterForm = document.querySelector('.newsletter__form');
+const newsletterForm = document.querySelector('.newsletter-content-form');
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const modal = document.getElementById('modal');
-const modalText = document.querySelector('.modal-text');
-const closeModal = document.querySelector('.close');
+
+const modal = document.getElementById('id-newsletter-modal');
+const modalText = document.querySelector('.newsletter-modal--text');
+const closeModal = document.querySelector('.newsletter-modal--close');
 
 // Функция для валидации email
 function validateEmail(event) {

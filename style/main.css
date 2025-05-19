@@ -542,6 +542,43 @@ body {
     font-size: 14px;
     /* border: 2px solid red; */
 }
+/* #region Модальное окно */
+.newsletter-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.newsletter-modal__content {
+    background-color: #fff;
+    border: 1px solid #00A4E5;
+
+    margin: 15% auto;
+    padding: 20px;
+    width: 30%;
+}
+
+.newsletter-modal--close {
+    color: #48555b;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.newsletter-modal--close:hover,
+.newsletter-modal--close:focus {
+    color: #00A4E5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* #endregion Модальное окно*/
 
 /* #endregion Раздел "Newsletter" */
 
@@ -691,40 +728,3 @@ body {
 
 /* #endregion Footer */
 
-/* #region Модальное окно */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-accent);
-
-    margin: 15% auto;
-    padding: 20px;
-    width: 30%;
-}
-
-.close {
-    color: var(--color-main);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: var(--color-accent);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* #endregion */
