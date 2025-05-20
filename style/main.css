@@ -544,7 +544,7 @@ body {
 }
 /* #region Модальное окно */
 .newsletter-modal {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -552,6 +552,8 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
+
+    /* Затемнение заднего плана: */
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -559,14 +561,15 @@ body {
     background-color: #fff;
     border: 1px solid #00A4E5;
 
-    margin: 15% auto;
+    margin: 15% auto; /* отцентрировали по центру, от верха отступили 15% (и от низа тоже) */
     padding: 20px;
-    width: 30%;
+    width: 30%; /* ширина 30% относительно экрана браузера */
 }
 
 .newsletter-modal--close {
     color: #48555b;
     float: right;
+    /* Свойство CSS float: right выравнивает элемент по правому краю, а все остальные элементы обтекают его по левой стороне */
     font-size: 28px;
     font-weight: bold;
 }
