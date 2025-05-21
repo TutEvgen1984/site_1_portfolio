@@ -107,6 +107,7 @@ body {
     letter-spacing: 0.34em;
     text-decoration: none;
     color: #fff;
+    transition: all 0.3s;
 }
 
 .header__title_h3:hover {
@@ -540,17 +541,20 @@ body {
 .error-message {
     color: red;
     font-size: 14px;
+    max-width: 250px;
     /* border: 2px solid red; */
 }
 /* #region Модальное окно */
 .newsletter-modal {
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    /* width и height занимают 100% окна браузера */
+
     overflow: auto;
 
     /* Затемнение заднего плана: */

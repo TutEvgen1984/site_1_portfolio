@@ -56,20 +56,21 @@ const modalText = document.querySelector('.newsletter-modal--text');
 const closeModal = document.querySelector('.newsletter-modal--close');
 
 // Функция для валидации email
-function validateEmail(event) {
-    event.preventDefault();
-    const email = emailInput.value.trim();
-    // Проверяем, соответствует ли введенный email регулярному выражению
+function validateEmail(event) { // в качестве event у нас будет событие submit
+    event.preventDefault(); // Отменяем действие по умолчанию - теперь форма не будет отправлена на сервер
+    console.log("event.preventDefault() сработал");
+    const email = emailInput.value.trim(); // удаляем пробелы с обоих концов строки, метод возвращает новую строку, не изменяя при этом исходную.
+    // Проверяем, соответствует ли введенный email регулярному выражению:
     if (emailRegex.test(email)) {
         modalText.textContent = `Ваш email ${email} успешно подписался на наши уведомления!`;
         modal.style.display = 'block';
 
-        errorMessage.style.display = 'none';
-        emailInput.value = '';
-        return true;
+        errorMessage.style.display = 'none'; // поле для информации о ошибках сделали невидимым
+        emailInput.value = ''; // стерли введеный пользователем email
+        return true; // return используется только в функциях,
     } else {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Пожалуйста, введите корректный email';
+        errorMessage.style.display = 'block'; // поле для информации о ошибках сделали видимым
+        errorMessage.textContent = 'Пожалуйста, введите корректный email user@example.com без пробелов';
         return false;
     }
 }
@@ -90,6 +91,7 @@ window.onclick = function (event) {
 newsletterForm.addEventListener('submit', validateEmail);
 
 // Добавляем обработчик события input для поля ввода email
+// Событие input срабатывает каждый раз при изменении значения
 emailInput.addEventListener('input', () => {
     // Если поле ввода пустое, скрываем сообщение об ошибке
     if (emailInput.value.trim() === '') {

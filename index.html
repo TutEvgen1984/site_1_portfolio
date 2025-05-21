@@ -68,7 +68,7 @@
     <!-- #endregion Our story -->
 
     <!-- #region Services -->
-    <section class="services">
+    <main class="services">
         <div class="container-940">
             <div class="services-content">
                 <div class="services-top" id="services">
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
     <!-- #endregion Services -->
 
     <!-- #region Get-in-touch -->
@@ -124,17 +124,16 @@
         <div class="container-1440">
             <div class="newsletter-content">
                 <div class="container-940">
-                    <form class="newsletter-content-form">
+                    <form class="newsletter-content-form" novalidate> <!-- novalidate указываем для того чтобы не срабатывала внутреняя проверка браузера и не перебивала код проверки email JS -->
                         <label class="newsletter-content-form__label-for-input-user-mail" for="user-mail">Newsletter
                             Signup</label>
                         <div class="email-plus-error-message">
                             <input class="newsletter-content-form__input-user-mail" type="email" id="user-mail"
-                                placeholder="test@youremail.com" required
-                                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                                placeholder="test@youremail.com" required title="Указанный формат: user@example.com">
+                                <!-- required pattern="^\S+@\S+\.\S+$" title="Указанный формат: user@example.com" -->
                             <div class="error-message"></div>
                         </div>
                         <input class="newsletter-content-form__submit" type="submit" value="Signup">
-
                     </form>
                 </div>
             </div>
