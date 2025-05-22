@@ -25,6 +25,17 @@
 
 html {
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    /* Пользователи могут по какой-то причине отключить анимацию в системе. Например, их укачивает от плавной прокрутки на странице с большим количеством контента. Чтобы этого не произошло, можно использовать директиву @media с проверкой значения prefers-reduced-motion в условии и анимировать прокрутку только тогда, когда пользователь не отключил анимацию. */
+    html {
+    scroll-behavior: smooth;
+    /* Управляет поведением прокрутки внутри блока. Значение smooth делает её плавной. https://doka.guide/css/scroll-behavior/ */
+
+    }
 }
 
 *,
@@ -53,6 +64,20 @@ body {
 
 /* #region Раздел "Header */
 
+/* ключевые кадры для прокрутки фона */
+@keyframes slide {
+    0%{
+        background-position: 0% 0%; /* https://doka.guide/css/background-position/ */
+        /* 0% 0% это смещение по оси х и у */
+    }
+    50%{
+        background-position: 100% 0%; /* смещение только по оси х на 100% */
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+
 .header-main {
     height: 768px;
     padding-top: 41px;
@@ -62,12 +87,15 @@ body {
     background-image: url(../img/header-bg.png);
     background-size: cover;
     background-position: center;
-    /* Если картинка не загрузится, то вместо неё пользователь увидит фоновый цвет. */
-    background-color: black;
+    background-color: black; /* Если картинка не загрузится, то вместо неё пользователь увидит фоновый черный цвет. */
+    /* Плавная прокрутка фона */
+    animation: slide 90s linear infinite;
+    /* для того, чтобы плавная прокрутка работала, нужно background-size: cover */
 
     /* весь текст внутри: */
     text-align: center;
     color: #fff;
+
 }
 
 /* Белый логотип KONSTRUCT */
@@ -135,7 +163,7 @@ body {
     height: 18px;
 }
 
-.nav {}
+/* .nav {} */
 
 .nav__link {
     text-decoration: none;
@@ -167,9 +195,9 @@ body {
     margin-right: 24px;
 }
 
-.link5 {}
+/* .link5 {}
 
-.nav__link--active {}
+.nav__link--active {} */
 
 /* #endregion Navigation */
 
@@ -333,7 +361,12 @@ body {
 
 .services-top {
     display: grid;
-    grid-template-columns: 353px 437px 150px;
+    /* grid-template-columns: 353px 437px 150px; */
+    /* grid-template-columns: repeat(auto-fill, 353px 437px 150px); */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* grid-template-rows: 40px; */
+    /* grid-auto-flow: row; */
+    row-gap: 20px;
     margin-bottom: 65px;
 }
 
@@ -433,12 +466,12 @@ body {
 .get-in-touch-content {
     text-align: center;
     background-image: url(../img/get-in-touch-bg.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
     height: 499px;
     padding-top: 96px;
-
+    animation: slide 90s linear infinite;
 }
 
 .get-in-touch-content__title-h2 {
@@ -699,7 +732,7 @@ body {
     color: #00A4E5;
 }
 
-.item-contact-us__email {}
+/* .item-contact-us__email {} */
 
 .item-contact-us__email:hover {
     color: #00A4E5;
