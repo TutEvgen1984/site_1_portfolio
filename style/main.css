@@ -170,6 +170,7 @@ body {
 .company-logo-black {
     width: 79px;
     height: 18px;
+    margin-right: 20px;
 }
 
 /* .nav {} */
@@ -206,21 +207,9 @@ body {
 
 /* .link5 {}
 
-.nav__link--active {} */
-
-/* Адаптивная версия - медиа запросы */
-@media screen and (max-width: 1440px) {}
-
-@media screen and (max-width: 1024px) {}
-
-@media screen and (max-width: 540px) {}
-
-@media screen and (max-width: 360px) {}
-
 /* #endregion Navigation */
 
 /* #region Раздел "Our Story" */
-
 
 .story {
     padding: 50px 0;
@@ -311,7 +300,7 @@ body {
     margin-right: 0px;
 }
 
-/* Адаптивная версия - медиа запросы */
+/* #region @media */
 @media screen and (max-width: 1440px) {
     .story_container {
         padding: 0 50px;
@@ -319,6 +308,10 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+    .story_inner {
+    justify-content: center;
+}
+
     .story_container {
         padding: 0 15px;
     }
@@ -365,6 +358,8 @@ body {
         width: 80%;
     }
 }
+
+/* #endregion @media */
 
 /* #endregion Раздел "Our Story" */
 
@@ -422,9 +417,9 @@ body {
     letter-spacing: 0.02em;
     color: #48555b;
     margin-top: 0;
-    padding-right: 40px;
+    padding-right: 20px;
 
-    width: 437px;
+    /* max-width: 437px; */
 
 }
 
@@ -510,14 +505,7 @@ body {
     .services-top {
         grid-template-columns: 1fr;
     }
-
 }
-
-@media screen and (max-width: 768px) {}
-
-@media screen and (max-width: 540px) {}
-
-@media screen and (max-width: 360px) {}
 
 /* #endregion @media */
 
@@ -594,7 +582,6 @@ body {
     font-size: 22px;
     letter-spacing: 0.04em;
     color: #fff;
-
 }
 
 .newsletter-content-form__input-user-mail {
@@ -688,9 +675,7 @@ body {
 /* #endregion Модальное окно*/
 
 /* #region @media */
-@media screen and (max-width: 1024px) {
-
-}
+@media screen and (max-width: 1024px) {}
 
 /* #endregion @media */
 
